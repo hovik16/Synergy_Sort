@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="quizEngine.js" defer></script>
     <!-- Need to add ico logo, use this line -> <link rel="icon" type="image/x-icon" href="logo.ico">-->
     <title>Synergy Sort Quiz</title>
 </head>
@@ -12,24 +13,25 @@
         <h1>Synergy Sort Quiz</h1>
     </header>
     <main>
-        <form class="quiz-form"></form>
+        <!-- I don't think the class is needed, may need to clean it up later -->
+        <form class="quiz-form" id="quiz-form">
             <section class="quiz">
                 <div class="question">
                     <h2>If you could have one superpower, which one would you choose?</h2>
                     <label>
-                        <input type="radio" name="q1">
+                        <input type="radio" name="q1" value="A" required>
                         A. Super strength: I’d never back down from anything.
                     </label>
                     <label>
-                        <input type="radio" name="q1">
+                        <input type="radio" name="q1" value="B">
                         B. Mind-reading: I like knowing what people are thinking.
                     </label>
                     <label>
-                        <input type="radio" name="q1">
+                        <input type="radio" name="q1" value="C">
                         C. Healing: I’d help people whenever they need it.
                     </label>
                     <label>
-                        <input type="radio" name="q1">
+                        <input type="radio" name="q1" value="D">
                         D. Shapeshifting: I’d always have a way out of a tricky situation.
                     </label>
                 </div>
@@ -37,19 +39,19 @@
                 <div class="question">
                     <h2>You’re making a playlist for a party. What’s your strategy?</h2>
                     <label>
-                        <input type="radio" name="q2">
+                        <input type="radio" name="q2" value="A" required>
                         A. Choose songs that will keep the energy up all night.
                     </label>
                     <label>
-                        <input type="radio" name="q2">
+                        <input type="radio" name="q2" value="B">
                         B. Carefully plan out a mix so there’s something for everyone.
                     </label>
                     <label>
-                        <input type="radio" name="q2">
+                        <input type="radio" name="q2" value="C">
                         C. Ask people what they want to hear and make sure everyone’s happy.
                     </label>
                     <label>
-                        <input type="radio" name="q2">
+                        <input type="radio" name="q2" value="D">
                         D. Add some unexpected songs to keep things interesting.
                     </label>
                 </div>
@@ -57,19 +59,19 @@
                 <div class="question">
                     <h2>You’re at a restaurant, and the waiter brings you the wrong food. How do you handle it?</h2>
                     <label>
-                        <input type="radio" name="q3">
+                        <input type="radio" name="q3" value="A" required>
                         A. Send it back immediately, I ordered something else.
                     </label>
                     <label>
-                        <input type="radio" name="q3">
+                        <input type="radio" name="q3" value="B">
                         B. Politely explain the mistake and ask for the right dish.
                     </label>
                     <label>
-                        <input type="radio" name="q3">
+                        <input type="radio" name="q3" value="C">
                         C. Keep it if it’s something I like, I don’t want to make a scene.
                     </label>
                     <label>
-                        <input type="radio" name="q3">
+                        <input type="radio" name="q3" value="D">
                         D. Try to get a free dessert out of the situation.
                     </label>
                 </div>
@@ -77,19 +79,19 @@
                 <div class="question">
                     <h2>You find a lost wallet with $50 inside. What do you do?</h2>
                     <label>
-                        <input type="radio" name="q4">
+                        <input type="radio" name="q4" value="A" required>
                         A. Try to find the owner and return it.
                     </label>
                     <label>
-                        <input type="radio" name="q4">
+                        <input type="radio" name="q4" value="B">
                         B. Take it to the nearest lost and found.
                     </label>
                     <label>
-                        <input type="radio" name="q4">
+                        <input type="radio" name="q4" value="C">
                         C. Ask around to see if anyone knows whose it is.
                     </label>
                     <label>
-                        <input type="radio" name="q4">
+                        <input type="radio" name="q4" value="D">
                         D. Keep it if no one claims it(finders keepers).
                     </label>
                 </div>
@@ -97,19 +99,19 @@
                 <div class="question">
                     <h2>You forgot to do your homework, and the teacher is collecting it. What’s your move?</h2>
                     <label>
-                        <input type="radio" name="q5">
+                        <input type="radio" name="q5" value="A" required>
                         A. Own up to it and take the L.
                     </label>
                     <label>
-                        <input type="radio" name="q5">
+                        <input type="radio" name="q5" value="B">
                         B. Try to explain the situation logically and ask for an extension.
                     </label>
                     <label>
-                        <input type="radio" name="q5">
+                        <input type="radio" name="q5" value="C">
                         C. See if I can quickly compare notes with a friend before class starts.
                     </label>
                     <label>
-                        <input type="radio" name="q5">
+                        <input type="radio" name="q5" value="D">
                         D. Try to talk my way out of it or find another solution.
                     </label>
                 </div>
@@ -117,19 +119,19 @@
                 <div class="question">
                     <h2>Your friend is going through a tough time but doesn’t want to talk about it. What’s your move?</h2>
                     <label>
-                        <input type="radio" name="q6">
+                        <input type="radio" name="q6" value="A" required>
                         A. Let them know you’re there for them and won’t push.
                     </label>
                     <label>
-                        <input type="radio" name="q6">
+                        <input type="radio" name="q6" value="B">
                         B. Observe their behavior and wait for the right time to check in.
                     </label>
                     <label>
-                        <input type="radio" name="q6">
+                        <input type="radio" name="q6" value="C">
                         C. Try to lift their spirits by including them in things.
                     </label>
                     <label>
-                        <input type="radio" name="q6">
+                        <input type="radio" name="q6" value="D">
                         D. Find a small but thoughtful way to show you care.
                     </label>
                 </div>
@@ -137,19 +139,19 @@
                 <div class="question">
                     <h2>You and your friends are hanging out when someone starts talking about a fight that happened at school. What’s your reaction?</h2>
                     <label>
-                        <input type="radio" name="q7">
+                        <input type="radio" name="q7" value="A" required>
                         A. “Wait, what happened? I need details.”
                     </label>
                     <label>
-                        <input type="radio" name="q7">
+                        <input type="radio" name="q7" value="B">
                         B. “Let’s think about why this even started, there’s gotta be a bigger reason.”
                     </label>
                     <label>
-                        <input type="radio" name="q7">
+                        <input type="radio" name="q7" value="C">
                         C. “I just hope no one got hurt. Fighting doesn’t solve anything.”
                     </label>
                     <label>
-                        <input type="radio" name="q7">
+                        <input type="radio" name="q7" value="D">
                         D. “I already knew this was gonna happen. I saw it coming.”
                     </label>
                 </div>
@@ -157,19 +159,19 @@
                 <div class="question">
                     <h2>You get on the bus, and there’s only one open seat left next to someone who looks upset. What do you do?</h2>
                     <label>
-                        <input type="radio" name="q8">
+                        <input type="radio" name="q8" value="A" required>
                         A. Sit down and ask them what’s wrong.
                     </label>
                     <label>
-                        <input type="radio" name="q8">
+                        <input type="radio" name="q8" value="B">
                         B. Mind my own business, but listen in case I need to step in.
                     </label>
                     <label>
-                        <input type="radio" name="q8">
+                        <input type="radio" name="q8" value="C">
                         C. Give them space but let them know I’m there if they need to talk.
                     </label>
                     <label>
-                        <input type="radio" name="q8">
+                        <input type="radio" name="q8" value="D">
                         D. Figure out if it’s worth talking to them or if I should just stay quiet.
                     </label>
                 </div>
@@ -177,19 +179,19 @@
                 <div class="question">
                     <h2>Your best friend just got grounded and can’t go out for two weeks. What’s your move?</h2>
                     <label>
-                        <input type="radio" name="q9">
+                        <input type="radio" name="q9" value="A" required>
                         A. Try to cheer them up and remind them it’ll pass.
                     </label>
                     <label>
-                        <input type="radio" name="q9">
+                        <input type="radio" name="q9" value="B">
                         B. Help them figure out how to avoid getting in trouble next time.
                     </label>
                     <label>
-                        <input type="radio" name="q9">
+                        <input type="radio" name="q9" value="C">
                         C. Keep them updated on everything so they don’t feel left out.
                     </label>
                     <label>
-                        <input type="radio" name="q9">
+                        <input type="radio" name="q9" value="D">
                         D. Find a way to still hang out without breaking the rules.
                     </label>
                 </div>
@@ -197,19 +199,19 @@
                 <div class="question">
                     <h2>You’re at a party and see someone getting clowned for wearing something different. What do you do?</h2>
                     <label>
-                        <input type="radio" name="q10">
+                        <input type="radio" name="q10" value="A" required>
                         A. Step in and shut that down because no one deserves that.
                     </label>
                     <label>
-                        <input type="radio" name="q10">
+                        <input type="radio" name="q10" value="B">
                         B. Think to yourself "this is why I think through my choices carefully".
                     </label>
                     <label>
-                        <input type="radio" name="q10">
+                        <input type="radio" name="q10" value="C">
                         C. Give them a compliment so they don’t feel alone.
                     </label>
                     <label>
-                        <input type="radio" name="q10">
+                        <input type="radio" name="q10" value="D">
                         D. Watch and see how they handle it before deciding what to do.
                     </label>
                 </div>
@@ -217,19 +219,19 @@
                 <div class="question">
                     <h2>You’re playing some kind of game and someone on your team is slacking. What do you do?</h2>
                     <label>
-                        <input type="radio" name="q11">
+                        <input type="radio" name="q11" value="A" required>
                         A. Tell them we're here to win so they need to step it up
                     </label>
                     <label>
-                        <input type="radio" name="q11">
+                        <input type="radio" name="q11" value="B">
                         B. Try to figure out their strengths and adjust the strategy.
                     </label>
                     <label>
-                        <input type="radio" name="q11">
+                        <input type="radio" name="q11" value="C">
                         C. Encourage them and remind them it’s just a game.
                     </label>
                     <label>
-                        <input type="radio" name="q11">
+                        <input type="radio" name="q11" value="D">
                         D. Find a way to carry the team myself if I have to
                     </label>
                 </div>
@@ -237,19 +239,19 @@
                 <div class="question">
                     <h2>Someone you know is lying to get out of trouble, and you KNOW the truth. What do you do?</h2>
                     <label>
-                        <input type="radio" name="q12">
+                        <input type="radio" name="q12" value="A" required>
                         A. Call them out since being honest is more important.
                     </label>
                     <label>
-                        <input type="radio" name="q12">
+                        <input type="radio" name="q12" value="B">
                         B. Think through the situation first, sometimes it’s not that simple.
                     </label>
                     <label>
-                        <input type="radio" name="q12">
+                        <input type="radio" name="q12" value="C">
                         C. Stay neutral, I don’t need drama in my life.
                     </label>
                     <label>
-                        <input type="radio" name="q12">
+                        <input type="radio" name="q12" value="D">
                         D. See if I can use this to my advantage later.
                     </label>
                 </div>
@@ -257,19 +259,19 @@
                 <div class="question">
                     <h2>Your teacher calls on you for an answer, and you totally blank. What do you do?</h2>
                     <label>
-                        <input type="radio" name="q13">
+                        <input type="radio" name="q13" value="A" required>
                         A. Just go for it, wrong answers are better than saying nothing.
                     </label>
                     <label>
-                        <input type="radio" name="q13">
+                        <input type="radio" name="q13" value="B">
                         B. Take a second to think, I can figure this out.
                     </label>
                     <label>
-                        <input type="radio" name="q13">
+                        <input type="radio" name="q13" value="C">
                         C. Look around for a classmate who might help.
                     </label>
                     <label>
-                        <input type="radio" name="q13">
+                        <input type="radio" name="q13" value="D">
                         D. Find a way to dodge the question smoothly.
                     </label>
                 </div>
@@ -277,19 +279,19 @@
                 <div class="question">
                     <h2>You find $20 on the ground outside of school. What’s your move?</h2>
                     <label>
-                        <input type="radio" name="q14">
+                        <input type="radio" name="q14" value="A" required>
                         A. Ask around to see if anyone lost it.
                     </label>
                     <label>
-                        <input type="radio" name="q14">
+                        <input type="radio" name="q14" value="B">
                         B. Think about the best way to handle this, maybe take it to the office?
                     </label>
                     <label>
-                        <input type="radio" name="q14">
+                        <input type="radio" name="q14" value="C">
                         C. Save it for something important.
                     </label>
                     <label>
-                        <input type="radio" name="q14">
+                        <input type="radio" name="q14" value="D">
                         D. I'll do whatever I want with it, it’s mine now.
                     </label>
                 </div>
