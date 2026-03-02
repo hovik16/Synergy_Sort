@@ -9,19 +9,22 @@ export function buildCountsArray(answers) {
     const counts = [0, 0, 0, 0]; 
 
     for (const a of answers) {
-        switch (a[0]) {
+        switch (a) {
             case "A":
-            counts[0]++;
-            break;
-        case "B":
-            counts[1]++;
-            break;
-        case "C":
-            counts[2]++;
-            break;
-        case "D":
-            counts[3]++;
-            break;
+                counts[0]++;
+                break;
+            case "B":
+                counts[1]++;
+                break;
+            case "C":
+                counts[2]++;
+                break;
+            case "D":
+                counts[3]++;
+                break;
+            case null:
+            case undefined:
+                break;
         }
     }
     return counts;
