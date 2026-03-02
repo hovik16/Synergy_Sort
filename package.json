@@ -1,0 +1,23 @@
+{
+  "name": "synergy_sort",
+  "version": "1.0.0",
+  "description": "",
+  "main": "quizEngine.js",
+  "scripts": {
+    "test": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hovik16/Synergy_Sort.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hovik16/Synergy_Sort/issues"
+  },
+  "homepage": "https://github.com/hovik16/Synergy_Sort#readme",
+  "devDependencies": {
+    "vitest": "^4.0.18"
+  }
+}
