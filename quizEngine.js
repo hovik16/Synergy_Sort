@@ -2,7 +2,7 @@
 console.log("quizEngine loaded");
 
 // Answers are stored in place and captured as an option is selected
-const NUM_QUESTIONS = 14;
+export const NUM_QUESTIONS = 14;
 
 export function buildCountsArray(answers) {
     // A, B, C, D
